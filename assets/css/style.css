@@ -110,26 +110,17 @@ footer img:nth-child(3){
 }
 
 
-@media(max-width: 1300px){
-    header img{
-        margin-bottom: 85px;
-    }
-    
-    body{
-        background-image: url("../images/bg-desktop.svg");
-        background-position: center;
-        background-size: cover;
-    }
-
-    main .left-content img{
-        width: 690px;
-        height: 530px;
-    }
-}
-
-@media(max-width: 900px){ 
+@media(max-width: 1300px){ 
     body{
         background-image: url("../images/bg-mobile.svg");
+        width: auto;
+    }
+
+    header{
+        width: calc(100vw - (80px + 95px));
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     header img{
@@ -200,18 +191,5 @@ footer img:nth-child(3){
     body{
         width: 0;
         height: auto;
-    }
-
-    header img{
-        margin-bottom: 15px;
-    }
-
-    .container{
-        padding-top: 30px;
-        padding-bottom: 15px;
-    }
-
-    footer{
-        height: 0;
     }
 }
