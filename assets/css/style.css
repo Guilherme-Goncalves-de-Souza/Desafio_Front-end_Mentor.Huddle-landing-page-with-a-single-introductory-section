@@ -1,3 +1,36 @@
+/* 
+
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%)
+
+## Typography
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400
+
+*/ 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -6,190 +39,215 @@
 
 body{
     background-image: url("../images/bg-desktop.svg");
-    background-position: center;
+    background-position: right;
     background-size: cover;
+    background-repeat: no-repeat;
     background-color: hsl(257, 40%, 49%);
 
     font-family: 'Poppins', sans-serif;
     color: white;
 
     width: 100vw;
-    height: 100vh;
-}
-
-.container{
-    padding-left: 80px;
-    padding-top: 60px;
-    padding-right: 95px;
-    padding-bottom: 35px;
+    overflow-x: hidden;
 }
 
 header img{
-    margin-bottom: 85px;
+    margin-bottom: 80px;
 }
+
+.container{
+   padding-left: 80px;
+   padding-top: 65px;
+   padding-right: 95px;
+   padding-bottom: 40px;
+
+   height: 100%;
+}
+
 
 main{
-    width: calc(100vw - (60px + 95px));
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
-main .left-content img{
-    width: 785px;
-    height: 546px;
+.left-content{
+    width: 55.43rem;
+    height: 35.93rem;
+
+    margin-right: 60px;
 }
 
-main .right-content{
-    padding-left: 55px;
+.left-content img{
+    width: 100%;
+    height: 100%;
 }
 
-main .right-content h1{
-    width: 420px;
+.right-content{
+    width: 31.56rem;
+    height: 17.81rem;
+}
+
+.right-content h1{
+    width: 430px;
+    font-size: 36px;
+
     margin-bottom: 30px;
-    font-size: 35px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
-main .right-content p{
-    width: 434px;
+.right-content p{
+    width: 453px;
+    font-size: 16px;
+
     font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-
-    margin-bottom: 25px;
+    font-weight: 400;
 }
 
-main .right-content a{
+.right-content a{
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 180px;
-    height: 55px;
-
-    text-decoration: none;
     background-color: white;
+    text-decoration: none;
     color: hsl(257, 40%, 49%);
-    border-radius: 999999999px;
-    box-shadow: 0px 5px 10px rgb(67, 54, 104);
-
-}
-
-main .right-content a:hover{
-    color: white;
-    background-color: hsl(300, 69%, 71%);
+    width: 188px;
+    height: 55px;
+    border-radius: 99px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
 }
 
 footer{
-    width: calc(100vw - (60px + 95px));
-    height: 95px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+
+    height: 80px;
 }
 
 footer img{
     width: 40px;
     height: 40px;
-    color: white;
 
     border: 2px solid white;
-    border-radius: 999px;
-    padding: 7px;
+    border-radius: 99px;
+    padding: 9px;
     margin-left: 15px;
 }
 
-footer img:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    filter: brightness(.1);
+@media(max-width: 1290px){
+
+    .left-content{
+        height: 34.93rem;
+    }
+
+    .right-content p {
+        width: 425px;
+        font-size: 15px;
+    }
+
+    .right-content h1{
+        font-size: 34px;
+    }
+
+    footer{
+        height: 124px;
+    }
 }
 
-footer img:nth-child(3){
-    margin-right: 20px;
-}
-
-
-@media(max-width: 1300px){ 
+@media(max-width: 1200px){
     body{
         background-image: url("../images/bg-mobile.svg");
-        width: auto;
     }
-
-    header{
-        width: calc(100vw - (80px + 95px));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    header img{
-        margin-bottom: 85px;
+    header img {
+        margin-bottom: 50px;
     }
 
     main{
         flex-direction: column;
     }
 
-    main .left-content img{
-        width: 600px;
-        height: 446px;
-        margin-bottom: 40px;
+    .left-content {
+        width: auto;
+        height: auto;
+        margin-right: 0px;
     }
-
-    main .right-content {
-        padding: 0px;
-        text-align: center;
-
+        
+    .right-content {
+        width: 31.56rem;
+        height: 19.81rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
-    main .right-content p{
-        font-size: 17px;
+    .right-content h1{
+        text-align: center;
+        font-size: 30px;
+        width: 399px;
+        margin-bottom: 20px;
     }
 
-    main .right-content a{
-        width: 220px;
-        margin-bottom: 40px;
+    .right-content p{
+        text-align: center;
+        width: 307px;
+        font-size: 16px;
+    }
+
+    .right-content a{
+        width: 250px;
     }
 
     footer{
         justify-content: center;
-    }
-
-}
-
-@media(max-width: 400px){
-
-    body{
-        background-size: contain;
-    }
-
-    header img{
-        margin-left: -58px;
-    }
-
-    main .left-content img{
-        width: 344px;
-        height: 264px;
-    }  
-
-    main .right-content h1 {
-        width: 342px;
-        font-size: 26px;
-    }
-
-    main .right-content p{
-        width: 324px;
-    }
-
-}
-
-@media(max-height: 800px){
-    body{
-        width: 0;
         height: auto;
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 400px){
+
+    body{
+        background-image: url("../images/bg-mobile.svg");
+        background-position: top;
+    }
+
+    .container {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    header img {
+        width: 150px;
+        height: 100px;
+        margin-left: 36px;
+        margin-bottom: 0;
+    }
+
+    .left-content {
+        width: 300px;
+    }
+
+    .right-content h1 {
+        font-size: 23px;
+        width: 276px;
+    }
+
+    .right-content a{
+        height: 48px;
+
+    }
+
+    footer{
+        margin-bottom: 30px;
     }
 }
